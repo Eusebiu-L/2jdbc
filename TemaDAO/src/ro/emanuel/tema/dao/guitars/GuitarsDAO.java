@@ -81,7 +81,7 @@ public class GuitarsDAO {
 	public static boolean update(Guitar guitar) throws SQLException {
 		Connection conn = DBHelper.getConnection();
 		
-		String query = "UPDATE `guitar` SET `brand`=?,`strings`=?,`number_strings`=? WHERE id=?";
+		String query = "UPDATE `guitars` SET `brand`=?,`strings`=?,`number_strings`=? WHERE id=?";
 		PreparedStatement updateGuitar = conn.prepareStatement(query);
 		
 		updateGuitar.setString(1, guitar.getBrand());
